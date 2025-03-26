@@ -22,6 +22,27 @@
             padding: 15px 30px; 
             font-size: 2rem; 
         }
+        /* スマホ用のスタイル */
+        @media screen and (max-width: 600px) {
+            body {
+                font-size: 1.5rem; /* スマホ用の小さい文字サイズ */
+            }
+            .kanji-container {
+                font-size: 4rem; /* スマホ用の漢字サイズ */
+            }
+            .buttons button {
+                font-size: 1.2rem; /* スマホ用のボタンサイズ */
+                padding: 12px 24px;
+            }
+        }
+
+        /* タブレットやPC用のスタイル */
+        @media screen and (min-width: 601px) {
+            .buttons button {
+                font-size: 1.5rem; /* タブレット・PC用のボタンサイズ */
+                padding: 15px 30px;
+            }
+        }
     </style>
 </head>
 <body>
