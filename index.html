@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>漢字テスト</title>
     <style>
-    html, body {
+  html, body {
     height: 100%;
     margin: 0;
     display: flex;
@@ -59,20 +59,6 @@
     }
 }
 
-/* ボタンを画面下部に固定 */
-#homeScreen, #testScreen {
-    position: relative;
-    padding-bottom: 120px;  /* ボタンの高さ分だけ余白を追加 */
-}
-
-.buttons {
-    position: fixed;
-    bottom: 10px;  /* 画面下部に固定 */
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 10;  /* ボタンを前面に表示 */
-}
-
 /* タブレットや小さめのPC画面用 */
 @media screen and (min-width: 601px) and (max-width: 1024px) {
     body {
@@ -98,6 +84,7 @@
         font-size: 2rem;
     }
 }
+
 
 
 
