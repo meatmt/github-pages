@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>漢字テスト</title>
     <style>
-        html, body {
+      html, body {
     height: 100%;
     margin: 0;
     display: flex;
@@ -16,6 +16,7 @@
     text-align: center;
 }
 
+/* ボタンの設定 */
 .buttons button, #homeScreen button {
     margin: 15px;
     padding: 15px 30px;
@@ -23,6 +24,7 @@
     height: 60px;  /* 高さを固定 */
     line-height: 60px;  /* 縦方向の中央揃え */
     box-sizing: border-box;  /* パディングがボタンのサイズに影響しないように */
+    display: inline-block;
 }
 
 /* 非表示クラス */
@@ -34,15 +36,10 @@
 .kanji-container {
     font-size: 6rem;
     margin-bottom: 20px;
-    text-align: center;
-}
-
-/* ボタンエリア */
-.buttons {
+    min-height: 150px;  /* 漢字表示領域の高さを確保 */
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    margin-top: 20px;
 }
 
 /* スマホ用のスタイル */
@@ -87,6 +84,7 @@
         font-size: 2rem;
     }
 }
+
 
     </style>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-0079Q5WD3J"></script>
