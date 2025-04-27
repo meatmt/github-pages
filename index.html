@@ -49,6 +49,14 @@
         font-size: 4rem; 
         min-height: 100px;
     }
+            .kanji-area {
+            min-height: 250px; /* 高さは自由に調整できる！ */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
     .buttons button, #homeScreen button {
         font-size: 1.2rem; 
         padding: 12px 24px;
@@ -106,8 +114,10 @@
 
     <!-- 問題画面 -->
     <div id="testScreen" class="hidden">
+        <div class="kanji-area">
         <div class="kanji-container" id="kanji">N3</div>
-        <div id="reading" class="hidden" style="font-size: 1.5rem;"></div>
+        <div id="reading" style="display: none; font-size: 1.5rem;"></div>
+    </div>
         <div class="buttons">
             <button onclick="showReading()">뜻과 읽기</button>
             <button onclick="nextKanji()">다음</button>
