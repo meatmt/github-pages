@@ -21,10 +21,13 @@
     margin: 15px;
     padding: 15px 30px;
     font-size: 2rem;
-    height: 60px;  /* 高さを固定 */
-    line-height: 60px;  /* 縦方向の中央揃え */
-    box-sizing: border-box;  /* パディングがボタンのサイズに影響しないように */
-    display: inline-block;
+    box-sizing: border-box;
+    display: inline-flex; /* フレックスボックスで中身の中央揃え */
+    align-items: center;  /* 縦方向の中央揃え */
+    justify-content: center;  /* 横方向の中央揃え */
+    white-space: normal; /* 改行を許可 */
+    text-align: center;  /* テキスト中央揃え */
+    max-width: 90vw; /* スマホでの横幅は画面に収める */
 }
 
 /* 非表示クラス */
@@ -44,18 +47,11 @@
 
 /* スマホ用のスタイル */
 @media screen and (max-width: 600px) {
-    body {
-        font-size: 1.2rem;
-    }
-    .kanji-container {
-        font-size: 3rem;  /* スマホ用に漢字を小さく調整 */
-        min-height: 100px;
-    }
     .buttons button, #homeScreen button {
         font-size: 1.2rem;
         padding: 12px 24px;
-        height: 50px;  /* スマホ用に少し小さく調整 */
-        line-height: 50px;
+        /* height: 50px; 削除 */
+        /* line-height: 50px; 削除 */
     }
 }
 
