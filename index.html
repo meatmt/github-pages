@@ -20,6 +20,26 @@
     text-align: center;  /* テキスト中央揃え */
     max-width: 90vw; /* スマホでの横幅は画面に収める */
 }
+/* ボタンを画面下部に固定するためのスタイル */
+.buttons {
+    position: fixed;
+    bottom: 20px; /* 下からの距離を調整 */
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: white; /* 背景白にして読みやすく */
+    padding: 10px 0;
+    z-index: 100;
+    gap: 10px; /* ボタン間の隙間を調整（marginの代わり） */
+}
+
+.buttons button {
+    margin: 0; /* gapで管理するのでmarginは不要 */
+}
+
+        
 
 /* 非表示クラス */
 .hidden {
@@ -35,6 +55,10 @@
     justify-content: center;
     align-items: center;
 }
+.kanji-area {
+    margin-bottom: 120px;
+}
+
 
 /* スマホ用のスタイル */
 @media screen and (max-width: 600px) {
