@@ -26,6 +26,27 @@
       justify-content: center;
       align-items: center;
     }
+    #homeScreen {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  justify-items: center;
+  width: 100%;
+  max-width: 600px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+    #homeScreen button {
+  width: 100%;
+  max-width: 250px;
+  padding: 15px 20px;
+  font-size: 1.8rem;
+  height: 60px;
+  line-height: 1.2;
+  box-sizing: border-box;
+}
+
+
 
     #reading {
       font-size: 1.5rem;
@@ -83,6 +104,10 @@
     height: 50px;           /* スマホ用にも高さを固定 */
     line-height: 1.2;
     padding: 10px 20px;
+  }
+        #homeScreen button {
+    font-size: 1.2rem;
+    height: 50px;
   }
     }
 
