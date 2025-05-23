@@ -60,13 +60,12 @@
 }
 #reading {
     font-size: 1.5rem;
-    height: 2.5em;
+    min-height: 2.5em;     /* ← 最低限の高さを確保（例：1～2行分） */
     line-height: 1.5em;
-    overflow: hidden;
+    overflow: visible;     /* ← 内容が切れないように */
     text-align: center;
-    margin-top: 10px; /* 調整自由 */
+    margin-top: 10px;
 }
-
 
 
 /* スマホ用のスタイル */
