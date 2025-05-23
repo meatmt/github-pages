@@ -26,26 +26,7 @@
       justify-content: center;
       align-items: center;
     }
-    #homeScreen {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 15px;
-  justify-items: center;
-  width: 100%;
-  max-width: 500px;
-  margin: 40px auto;
-  padding: 10px;
-  box-sizing: border-box;
-}
-
-#homeScreen button {
-  width: 100%;
-  max-width: 220px;
-  font-size: 1.6rem;
-  height: 60px;
-  line-height: 1.2;
-  box-sizing: border-box;
-}
+    
 
 
     #reading {
@@ -85,27 +66,7 @@
     .hidden {
       display: none;
     }
-        .homeButtons {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 15px;
-  justify-items: center;
-  width: 100%;
-  max-width: 500px;
-  margin: 40px auto;
-  padding: 10px;
-  box-sizing: border-box;
-}
-
-.homeButtons button {
-  width: 100%;
-  max-width: 220px;
-  font-size: 1.6rem;
-  height: 60px;
-  line-height: 1.2;
-  box-sizing: border-box;
-}
-
+        
 
     /* スマホサイズ */
     @media screen and (max-width: 600px) {
@@ -174,7 +135,6 @@
 <body>
     <!-- ホーム画面 -->
     <div id="homeScreen">
-  <div class="homeButtons">
     <button onclick="startTest(10)">10~34</button>
     <button onclick="startTest(11)">35~59</button>
     <button onclick="startTest(12)">60~84</button>
@@ -182,7 +142,6 @@
     <button onclick="startTest(14)">110~134</button>
     <button onclick="startTest(15)">135~</button>
     <button onclick="location.href='https://meatmt.github.io/kanji-test/'">전부의 복습</button>
-  </div>
 </div>
 
 
