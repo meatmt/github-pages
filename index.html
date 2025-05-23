@@ -6,113 +6,105 @@
     <title>漢字テスト</title>
     <style>
   html, body {
-    height: 100%;
-    margin: 0;
-    display: flex;
-    flex-direction: column3px;
-    padding: 15px 30px;
-    font-size: 2rem;
-    box-sizing: border-box;
-    display: inline-flex; /* フレックスボックスで中身の中央揃え */
-    align-items: center;  /* 縦方向の中央揃え */
-    justify-content: center;  /* 横方向の中央揃え */
-    white-space: normal; /* 改行を許可 */
-    text-align: center;  /* テキスト中央揃え */
-    max-width: 90vw; /* スマホでの横幅は画面に収める */
-}
-/* ボタンを画面下部に固定するためのスタイル */
-.buttons {
-    position: fixed;
-    bottom: 20px; /* 下からの距離を調整 */
-    left: 0;
-    right: 0;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    background-color: white; /* 背景白にして読みやすく */
-    padding: 10px 0;
-    z-index: 100;
-    gap: 10px; /* ボタン間の隙間を調整（marginの代わり） */
-}
-
-.buttons button {
-    margin: 0; /* gapで管理するのでmarginは不要 */
-}
-
-        
-
-/* 非表示クラス */
-.hidden {
-    display: none;
-}
-
-/* 漢字表示領域 */
-.kanji-container {
-    font-size: 3rem; /* 小さくする */
-    margin-bottom: 20px;
-    min-height: 150px;  /* 漢字表示領域の高さを確保 */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.kanji-area {
-    margin-bottom: 120px;
-}
-#reading {
-    font-size: 1rem;
-    min-height: 2.5em;     /* ← 最低限の高さを確保（例：1～2行分） */
-    line-height: 1.5em;
-    overflow: visible;     /* ← 内容が切れないように */
-    text-align: center;
-    margin-top: 10px;
-}
-
-
-/* スマホ用のスタイル */
-@media screen and (max-width: 600px) {
-    .buttons button, #homeScreen button {
-        font-size: 1.2rem;
-        padding: 12px 24px;
-        
+      height: 100%;
+      margin: 0;
     }
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      font-size: 2.5rem;
+      overflow-y: auto;
+    }
+
+    .kanji-container {
+      font-size: 6rem;
+      margin-bottom: 20px;
+      min-height: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
     #reading {
-        font-size: 0.9rem;  /* スマホではさらに小さく */
+      font-size: 1.5rem;
+      min-height: 2.5em;
+      line-height: 1.5em;
+      text-align: center;
+      margin-top: 10px;
     }
-}
 
-/* タブレットや小さめのPC画面用 */
-@media screen and (min-width: 601px) and (max-width: 1024px) {
-    body {
-        font-size: 2rem;
+    .kanji-area {
+      min-height: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
     }
-    .kanji-container {
-        font-size: 6rem;
-    }
-    button {
-        font-size: 1.8rem;
-    }
-}
 
-/* 大きなPC画面用 */
-@media screen and (min-width: 1025px) {
-    body {
-        font-size: 2.5rem;
+    .buttons {
+      display: flex;
+      flex-direction: column;
     }
-    .kanji-container {
-        font-size: 8rem;
-    }
+
     button {
-        font-size: 2rem;
+      margin: 15px;
+      padding: 15px 30px;
+      font-size: 2rem;
     }
-}
+
+    .hidden {
+      display: none;
+    }
+
+    /* スマホサイズ */
     @media screen and (max-width: 600px) {
-    .kanji-container {
-        font-size: 2.5rem;
-    }
-    #reading {
+      body {
+        font-size: 1.2rem;
+      }
+      .kanji-container {
+        font-size: 3rem;
+        min-height: 100px;
+      }
+      #reading {
         font-size: 1rem;
+        min-height: 2em;
+      }
+      button {
+        font-size: 1.2rem;
+        padding: 10px 20px;
+        height: 50px;
+        line-height: 50px;
+      }
     }
-}
+
+    /* タブレットサイズ */
+    @media screen and (min-width: 601px) and (max-width: 1024px) {
+      body {
+        font-size: 2rem;
+      }
+      .kanji-container {
+        font-size: 6rem;
+      }
+      button {
+        font-size: 1.8rem;
+      }
+    }
+
+    /* PCサイズ */
+    @media screen and (min-width: 1025px) {
+      body {
+        font-size: 2.5rem;
+      }
+      .kanji-container {
+        font-size: 8rem;
+      }
+      button {
+        font-size: 2rem;
+      }
+    }
 
 
 
