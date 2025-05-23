@@ -6,18 +6,24 @@
     <title>漢字テスト</title>
     <style>
   html, body {
-    height: 100%;
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    padding: 0;
     font-size: 2rem;
     text-align: center;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    overflow-y: auto; /* ← これでスマホでもスクロール可能に */
+    min-height: 100vh; /* コンテンツが少なくても画面全体をカバー */
+}
+
+
 /* ボタンの設定 */
-.buttons button, #homeScreen button {
+.buttons button{
     margin: 15px;
     padding: 15px 30px;
     font-size: 2rem;
@@ -28,6 +34,15 @@
     white-space: normal; /* 改行を許可 */
     text-align: center;  /* テキスト中央揃え */
     max-width: 90vw; /* スマホでの横幅は画面に収める */
+}
+#homeScreen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px;
+    overflow-y: auto;
 }
 
 /* 非表示クラス */
