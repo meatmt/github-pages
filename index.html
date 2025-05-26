@@ -19,35 +19,32 @@
     }
 
     .kanji-container {
-  font-size: 6rem;
-  height: 150px; /* 高さ固定で上に動かない */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+      font-size: 6rem;
+      margin-bottom: 20px;
+      min-height: 150px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
     
 
 
     #reading {
-  font-size: 1.5rem;
-  min-height: 2.5em;
-  text-align: center;
-  margin-top: 10px;
-  visibility: hidden; /* 初期は見えないけど、位置は確保 */
-}
-    #reading.show {
-  visibility: visible; /* ボタン押すと見える */
-}
+      font-size: 1.5rem;
+      min-height: 2.5em;
+      line-height: 1.5em;
+      text-align: center;
+      margin-top: 10px;
+    }
 
     .kanji-area {
-  min-height: 300px; /* 必要に応じて調整 */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  position: relative; /* 子要素の制御用 */
-}
+      min-height: 250px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
 
     .buttons {
   display: flex;
