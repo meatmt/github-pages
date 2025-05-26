@@ -1816,10 +1816,9 @@
         }
 
         function showReading() {
-  const reading = document.getElementById("reading");
-  reading.textContent = `${currentList[currentIndex].reading} (${currentList[currentIndex].meaning})`;
-  reading.classList.add('show');
-}
+            document.getElementById("reading").textContent = `${currentList[currentIndex].reading} (${currentList[currentIndex].meaning})`;
+            document.getElementById("reading").classList.remove("hidden");
+        }
 
 
         function nextKanji() {
